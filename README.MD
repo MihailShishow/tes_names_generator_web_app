@@ -6,7 +6,7 @@ This application was initially designed as an attempt to create a tool for names
 
 By using slightly modified code from [here](http://www.roguebasin.com/index.php?title=Markov_chains_name_generator_in_Python), this application helps to generate names for the characters of all of the playable races from The Elder Scrolls games, starting from the third chapter.
 
-Base data was taken from the [the UESP](https://en.uesp.net/wiki/Lore:Names), then normalized and processed to generate new names.
+Base data was taken from [the UESP](https://en.uesp.net/wiki/Lore:Names), then normalized and processed to generate new names.
 
 
 # Technical information

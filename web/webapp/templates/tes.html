@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}The Elder Scrolls | {{ title }}{% endblock %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-4">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <h3>Races</h3>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('altmer') }}" class="nav-link">Altmer</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('argonian') }}" class="nav-link">Argonian</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('bosmer') }}" class="nav-link">Bosmer</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('breton') }}" class="nav-link">Breton</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('dunmer') }}" class="nav-link">Dunmer</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('imperial') }}" class="nav-link">Imperial</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('khajiit') }}" class="nav-link">Khajiit</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('nord') }}" class="nav-link">Nord</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('orsimer') }}" class="nav-link">Orsimer</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('redguard') }}" class="nav-link">Redguard</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="2">{{ title }}</th>
+                </tr>
+                <tr>
+                    <th>Male Names</th>
+                    <th>Female Names</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for name_tuple in names %}
+
+                <tr>
+                    <td class="align-middle">{{ name_tuple[0] }}</td>
+                    <td class="align-middle">{{ name_tuple[1] }}</td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}

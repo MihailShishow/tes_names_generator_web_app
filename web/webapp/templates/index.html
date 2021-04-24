@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>Welcome to the Names Generator!</h1>
+    <p class="lead">Hello, this application was initially designed as an attempt to create a tool for names
+        generation for The Elder Scrolls games universe. In the future, more settings and universes may be added.</p>
+    <p>By using slightly modified code from <a
+            href="http://www.roguebasin.com/index.php?title=Markov_chains_name_generator_in_Python">here</a>, this
+        application helps to generate names for the characters of all of the playable races from The Elder Scrolls
+        games, starting from the third chapter.</p>
+    <p>Base data was taken from <a href="https://en.uesp.net/wiki/Lore:Names">the UESP</a>, then normalized and
+        processed to generate new names.</p>
+    <p class="lead">In order to begin, please click <a href="{{ url_for('altmer') }}">here</a>, and you'll be taken to
+        the names generator interface.</p>
+</div>
+<div class="jumbotron">
+    <h1>Technical Information</h1>
+    <p class="lead">This application was built using the following stack of technologies:</p>
+    <ul>
+        <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a></li>
+        <li><a href="https://www.nginx.com/">nginx</a></li>
+        <li><a href="https://www.docker.com/">Docker</a></li>
+        <li><a href="https://getbootstrap.com/">Bootstrap 4</a></li>
+        <li><a href="https://bootswatch.com/darkly/">Darkly theme for Bootstrap</a></li>
+    </ul>
+</div>
+{% endblock %}

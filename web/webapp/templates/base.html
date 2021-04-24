@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>{% block title %}{% endblock %} - Names Generator</title>
+</head>
+
+<body>
+    <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a href="{{ url_for('index') }}" class="navbar-brand">Names Generator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColl"
+            aria-controls="navbarColl" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColl">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="{{ url_for('altmer') }}" class="nav-link">The Elder Scrolls</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <script src="{{ url_for('static', filename='jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+</body>
+
+</html>
